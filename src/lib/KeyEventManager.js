@@ -91,22 +91,22 @@ class KeyEventManager {
     this._decrementComponentCount();
   }
 
-  _incrementComponentCount(){
+  _incrementComponentCount() {
     const preMountedComponentCount = this.mountedComponentsCount;
     this.mountedComponentsCount += 1;
 
-    if (preMountedComponentCount === 0 && this.mountedComponentsCount === 1) {
+    /*if (preMountedComponentCount === 0 && this.mountedComponentsCount === 1) {
       window.addEventListener('blur', this._blurHandler);
-    }
+    }*/
   }
 
-  _decrementComponentCount(){
+  _decrementComponentCount() {
     const preMountedComponentCount = this.mountedComponentsCount;
     this.mountedComponentsCount -= 1;
 
-    if (preMountedComponentCount === 1 && this.mountedComponentsCount === 0) {
+    /*if (preMountedComponentCount === 1 && this.mountedComponentsCount === 0) {
       window.removeEventListener('blur', this._blurHandler);
-    }
+    }*/
   }
 
   _clearKeyHistory() {
